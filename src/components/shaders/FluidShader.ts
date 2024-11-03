@@ -113,6 +113,7 @@ export const FluidShader = {
       color.rgb += waterColor * (noise1 * 0.1) + highlightColor * highlight;
 
       gl_FragColor = color;
+      gl_FragColor.rgb = pow(gl_FragColor.rgb, vec3(1.0 / 2.2));
     }
   `,
 };

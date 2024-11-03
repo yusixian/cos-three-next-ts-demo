@@ -19,6 +19,8 @@ export function FluidEffect() {
     const renderPass = new RenderPass(scene, camera);
     composer.current.addPass(renderPass);
 
+    gl.outputColorSpace = THREE.SRGBColorSpace;
+
     bulgePass.current = new ShaderPass(FluidShader);
     bulgePass.current.uniforms.uResolution.value.set(size.width, size.height);
     composer.current.addPass(bulgePass.current);
