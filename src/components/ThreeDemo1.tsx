@@ -3,10 +3,11 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import CenterLogo from "./ui/CenterLogo";
+import { FluidEffect } from "./effects/FluidEffect";
 
 export default function ThreeDemo1() {
   return (
-    <div className="bg-slate-500">
+    <div className="bg-zinc-900">
       ThreeDemo1
       <Canvas
         id="three-demo-1"
@@ -24,7 +25,7 @@ export default function ThreeDemo1() {
         <Suspense>
           <CenterLogo />
         </Suspense>
-        {/* <BulgeEffect /> */}
+        <FluidEffect />
       </Canvas>
     </div>
   );
